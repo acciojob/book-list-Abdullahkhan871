@@ -1,6 +1,6 @@
 //your JS code here. If required.
 let form = document.querySelector(".form-group");
-let tableBody = document.querySelector(".book-list");
+let tableBody = document.querySelector("#book-list");
 let userData = document.querySelectorAll("input[type='text']");
 
 form.addEventListener("submit", handleSubmit);
@@ -16,7 +16,10 @@ function handleSubmit(e) {
       t.style.outline = "";
     }
   }
-  let row = tableBody.insertRow();
+  //   let row = tableBody.insertRow();
+  let row = document.createElement("tr");
+  tableBody.append(row);
+
   let td;
   for (let t of userData) {
     td = row.insertCell();
