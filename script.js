@@ -12,6 +12,8 @@ function handleSubmit(e) {
     if (!t.value) {
       t.style.outline = "1px solid red";
       return;
+    } else {
+      t.style.outline = "";
     }
   }
   let row = tableBody.insertRow();
@@ -22,8 +24,8 @@ function handleSubmit(e) {
   }
 
   let clearBtn = document.createElement("button");
-  clearBtn.innerText = "Clear";
-  clearBtn.classList.add("clear");
+  clearBtn.innerText = "delete";
+  clearBtn.classList.add("delete");
   clearBtn.addEventListener("click", handleClr);
 
   let tdBtn = row.insertCell();
